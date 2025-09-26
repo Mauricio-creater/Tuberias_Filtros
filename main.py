@@ -1,5 +1,4 @@
 
-import pandas as pd
 from filtros import aplicar_filtros
 from utils import cargar_datos
 import tkinter as tk
@@ -44,6 +43,7 @@ def main():
     
     # Cargar los datos desde Excel
     df = cargar_datos(input_file)
+    
 
     # Filtros seleccionados (esto puede ser dinámico, dependiendo de la UI o parámetros)
     filtros_seleccionados = ["Filtro 1", "Filtro 2", "Filtro 3", "Filtro 4"]
