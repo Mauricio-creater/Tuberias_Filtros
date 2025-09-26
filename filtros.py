@@ -38,12 +38,15 @@ def save_file(df, output_file):
 def aplicar_filtros(df, filtros_seleccionados, year, output_file):
     """Aplica los filtros seleccionados sobre el DataFrame."""
     if "Filtro 1" in filtros_seleccionados:
-        df = filtro_1(df, year)
+        df = filtro_1(df, year) # Filtro de origen
     if "Filtro 2" in filtros_seleccionados:
-        df = filtro_2(df)
+        df = filtro_2(df) # Filtro de procesamiento
     if "Filtro 3" in filtros_seleccionados:
-        df = filtro_3(df)
+        df = filtro_3(df) # Filtro de procesamiento
     if "Filtro 4" in filtros_seleccionados:
-        df = filtro_4(df)
-    save_file(df, output_file)  # Guarda el archivo
+        df = filtro_4(df) # Filtro de fregadero
+
+    save_file(df, output_file)  # Bomba
+    # Receptor de datos es el archivo de salida .xlsx
+    
     return df

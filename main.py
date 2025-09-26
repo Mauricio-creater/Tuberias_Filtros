@@ -41,7 +41,7 @@ def main():
 
     year = 2023  # Año para filtrar las contrataciones
     
-    # Cargar los datos desde Excel
+    # Fuente de datos archivo .xlsx de entrada
     df = cargar_datos(input_file)
     
 
@@ -49,7 +49,7 @@ def main():
     filtros_seleccionados = ["Filtro 1", "Filtro 2", "Filtro 3", "Filtro 4"]
 
     # Aplicar los filtros y guardar los resultados
-    resultados = aplicar_filtros(df, filtros_seleccionados, year, output_file)
+    resultados = aplicar_filtros(df, filtros_seleccionados, year, output_file)  # Bomba
 
     # Mostrar las primeras filas del DataFrame resultante
     print(resultados.head())
