@@ -31,7 +31,7 @@ def filtro_4(df):
         raise ValueError("No se encontró una columna que contenga 'monto'.")
     return df[df[monto_column[0]].str[4:].astype(float) > 5000]
 
-def filtro_5(df, output_file):
+def save_file(df, output_file):
     """Guarda el DataFrame en un archivo Excel."""
     df.to_excel(output_file, index=False)
 
@@ -45,5 +45,5 @@ def aplicar_filtros(df, filtros_seleccionados, year, output_file):
         df = filtro_3(df)
     if "Filtro 4" in filtros_seleccionados:
         df = filtro_4(df)
-    filtro_5(df, output_file)  # Guarda el archivo
+    save_file(df, output_file)  # Guarda el archivo
     return df
