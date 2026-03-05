@@ -35,6 +35,7 @@ def save_file(df, output_file):
     """Guarda el DataFrame en un archivo Excel."""
     df.to_excel(output_file, index=False)
 
+# Tuberias
 def aplicar_filtros(df, filtros_seleccionados, year, output_file):
     """Aplica los filtros seleccionados sobre el DataFrame."""
     if "Filtro 1" in filtros_seleccionados:
